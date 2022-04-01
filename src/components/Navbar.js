@@ -14,17 +14,24 @@ export default function Navbar() {
             <ul>
                 <li className={styles.title}>my money</li>
 
-                <li>
-                    <Link to='/login'>login</Link>
-                </li>
-                <li>
-                    <Link to='/signup'>signup</Link>
-                </li>
-                {user && 
+                {user ? 
+                <>
+                    <li>hello, {user.displayName}</li>
                     <li>
                         <button className='btn' onClick={logout}>logout</button>
-                    </li>}
-                
+                    </li>
+                </>
+                :
+                <>
+                    <li>
+                        <Link to='/login'>login</Link>
+                    </li>
+                    <li>
+                        <Link to='/signup'>signup</Link>
+                    </li>
+                </>
+                }
+
             </ul>
         </nav>
     )
