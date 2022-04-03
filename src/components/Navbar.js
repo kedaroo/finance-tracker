@@ -13,25 +13,25 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <ul>
                 <li className={styles.title}>
-                    <Link to='/'>my money</Link>
+                    <Link to='/'>finance tracker</Link>
                 </li>
 
-                {user ? 
-                <>
-                    <li>hello, {user.displayName}</li>
-                    <li>
-                        <button className='btn' onClick={logout}>logout</button>
-                    </li>
-                </>
-                :
-                <>
-                    <li>
-                        <Link to='/login'>login</Link>
-                    </li>
-                    <li>
-                        <Link to='/signup'>signup</Link>
-                    </li>
-                </>
+                {user ?
+                    <>
+                        {/* <li>hello, {user.displayName}</li> */}
+                        <li>
+                            <button className='btn' onClick={logout}>logout</button>
+                        </li>
+                    </>
+                    :
+                    <>
+                        <li>
+                            <Link to='/login'>login</Link>
+                        </li>
+                        <li>
+                            <Link to='/signup'>signup</Link>
+                        </li>
+                    </>
                 }
 
             </ul>

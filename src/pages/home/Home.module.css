@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     max-width: 960px;
-    margin: 60px auto;
+    margin: 1rem auto;
+    /* padding: 1rem; */
   }
   .content {
     padding-right: 30px;
@@ -12,7 +13,7 @@
   }
   .sidebar form {
     padding: 20px;
-    background: #1f9751;
+    background: #411f97;
     border-radius: 10px;
   }
   .sidebar input, .sidebar select {
@@ -24,7 +25,6 @@
     border: 0;
     border-radius: 4px;
     color: #555;
-    font-size: 1em;
   }
   .sidebar label {
     margin: 0 auto 20px;
@@ -36,14 +36,14 @@
     border: 2px solid #fff;
     padding: 6px 12px;
     background-color: transparent;
-    font-size: 1em;
+    font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
     display: block;
     width: 100%;
   }
   .sidebar h3 {
-    color: #1f9751;
+    color: #3b1f97;
     margin-bottom: 20px;
   }
   .sidebar aside {
@@ -59,23 +59,23 @@
   margin: 30px auto;
   border: 1px solid #f2f2f2;
   box-shadow: 3px 3px 5px rgba(50,50,50,0.1);
-  padding: 20px;
+  padding: 12px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-left: 4px solid #1f9751;
+  border-left: 4px solid #4b1f97;
 }
 .transactions .name {
   color: #777;
-  font-size: 1.4em;
+  font-size: 1rem;
 }
 .transactions .amount {
   margin-left: auto;
   margin-right: 40px;
   color: #777;
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.1rem;
 }
 .transactions button {
   position: absolute;
@@ -87,6 +87,36 @@
   padding: 12px 8px;
   text-align: center;
   line-height: 0;
-  font-size: 0.9em;
+  font-size: 1rem;
   cursor: pointer;
+}
+
+.btn-add {
+  display: none;
+}
+
+@media (max-width: 750px) {
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    display: none;
+  }  
+
+  .btn-add {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: block;
+    border-radius: 50%;
+    width: 3.5rem;
+  }
 }

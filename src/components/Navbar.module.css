@@ -1,6 +1,6 @@
 .navbar {
     width: 100%;
-    background: #effaf0;
+    background: #ebe5ff;
     padding: 20px 10px;
     box-sizing: border-box;
 }
@@ -17,14 +17,14 @@
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 1.2rem;
+    text-align: left;
 }
 
-.navbar button,
-.navbar a {
-    margin-left: 16px;
+.navbar button {
+    margin-left: 1rem;
 }
 
 .navbar a {
-    color: #333;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
